@@ -1,0 +1,240 @@
+:root {
+  --font-body: Poppins, sans-serif;
+  --secondary: #eef7fe;
+  --primary: #22215b;
+  --primary-light: #2f2f31;
+}
+
+html {
+  font-size: 100%;
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: inherit;
+  text-decoration: none;
+}
+
+html {
+  font-family: var(--font-body);
+}
+
+body {
+  background-color: #fff;
+}
+.main_weapper {
+  /* background-image: url(img/page1.jpeg); */
+  background-size: cover;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+  background-position: center center;
+}
+.container {
+  width: 92%;
+  margin: 0 auto;
+}
+.row {
+  display: flex;
+  flex-wrap: wrap;
+}
+.col-6 {
+  width: 50%;
+}
+.col-4 {
+  width: 33.33%;
+}
+.col-8 {
+  width: 66.33%;
+}
+.pt-5 {
+  padding-top: 2rem;
+}
+.weekly_wether li {
+  margin: 5px 0;
+}
+.weekly_wether ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  min-height: calc(100vh - 4rem);
+}
+button {
+  font-family: inherit;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+}
+
+.card {
+  background: #124606;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  border-radius: 20px;
+  padding: 12px 18px;
+}
+.card__info__place {
+  font-size: 14px;
+  color: var(--primary-light);
+}
+.card__info__time {
+  font-size: 20px;
+  color: #fff;
+  font-weight: 500;
+}
+.card__info__date {
+  font-size: 14px;
+  color: #fff;
+  text-align: center;
+}
+.card__weather {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.card__weather__temp {
+  font-size: 32px;
+  font-weight: 500;
+  color: #fff;
+}
+.card__weather__icon {
+  animation: move 1s infinite alternate ease-in-out;
+}
+
+@keyframes move {
+  to {
+    transform: translateY(-10px);
+  }
+}
+
+.bottom_wether_detail {
+  position: fixed;
+  max-width: 500px;
+  width: 100%;
+  bottom: 0;
+  border-radius: 20px 20px 0 0;
+  background-color: rgb(18 69 6 / 80%);
+}
+.detail_card .card {
+  flex-wrap: wrap;
+  padding: 30px;
+  align-items: flex-start;
+  background: transparent;
+}
+.detail_card .card__info {
+  width: 100%;
+  margin-bottom: 30px;
+}
+.detail_card .card ul {
+  list-style: none;
+  color: #fff;
+  font-weight: 500;
+  padding: 0 10px;
+}
+
+.detail_card .card ul li {
+  margin-bottom: 10px;
+}
+
+.card__weather img {
+  width: 40px;
+}
+
+/*** search **/
+
+.search_wrapper {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #124606;
+}
+.search_form {
+  max-width: 500px;
+  width: 100%;
+}
+.search_form h1 {
+  text-align: center;
+  margin-bottom: 40px;
+  font-size: 50px;
+  line-height: 50px;
+  background: -webkit-linear-gradient(#0e9a39, #eaeba5);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.search_form h1 span {
+  font-size: 44px;
+}
+.icon-input {
+  margin-bottom: 10px;
+  position: relative;
+  max-width: 100%;
+}
+.icon-input__text-field {
+  width: 100%;
+  padding: 11px 32px 11px 15px;
+  border: none;
+  border-radius: 10px;
+  font-size: 16px;
+  outline: none;
+}
+.icon-input__icon {
+  color: black;
+  position: absolute;
+  top: 50%;
+  right: 4px;
+  transform: translateY(-50%);
+}
+.icon-input__text-field:focus + .icon-input__icon {
+  color: #124606;
+}
+
+/*** search **/
+
+@media only screen and (max-width: 992px) {
+  /* For desktop: */
+  .col-4 {
+    width: 100%;
+  }
+  .col-6 {
+    width: 100;
+  }
+  .col-8 {
+    width: 100%;
+  }
+  .pt-5 {
+    padding-top: 1rem;
+  }
+  .detail_card .card {
+    padding: 15px;
+  }
+  .detail_card .card__info {
+    margin-bottom: 10px;
+  }
+  .bottom_wether_detail {
+    position: relative;
+    max-width: 500px;
+    width: 100%;
+    bottom: auto;
+    border-radius: 20px;
+    background-color: rgb(18 69 6 / 80%);
+    width: 100%;
+    margin: 15px 0;
+  }
+  .weekly_wether ul {
+    min-height: auto;
+  }
+  .main_weapper {
+    background-size: cover;
+    background-position: center center;
+  }
+  .search_wrapper {
+    padding: 0 4%;
+  }
+}
